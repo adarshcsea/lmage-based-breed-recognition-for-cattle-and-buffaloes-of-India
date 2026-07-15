@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiBreed AI - Cattle & Buffalo Recognition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="gradient-bg">
+        <div class="g1"></div>
+        <div class="g2"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-dna pulse-icon"></i>
+            <span>IndiBreed<span class="highlight">AI</span></span>
+        </div>
+        <nav>
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#scanner" class="nav-link">Identify</a>
+            <a href="#breeds" class="nav-link">Indian Breeds</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <span class="tagline"><i class="fa-solid fa-sparkles"></i> Advanced Computer Vision for Indian Livestock</span>
+                <h1>Preserving & Identifying <br><span class="text-gradient">Indigenous Breeds</span></h1>
+                <p>Instantly recognize indigenous Indian cattle and buffalo breeds using deep learning. Empowering dairy farmers, researchers, and conservationists with precision technology.</p>
+                <div class="hero-cta">
+                    <a href="#scanner" class="btn btn-primary">Start Recognition <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#breeds" class="btn btn-secondary">Explore Breeds</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <h4>98.4% Accuracy</h4>
+                        <p>Trained on native breeds</p>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fa-solid fa-bolt"></i>
+                    <div>
+                        <h4>Real-time Analysis</h4>
+                        <p>Results in milliseconds</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scanner" class="scanner-section">
+            <div class="section-header">
+                <h2>AI Recognition Core</h2>
+                <p>Upload a clear photograph of the animal to identify its specific indigenous breed.</p>
+            </div>
+
+            <div class="scanner-container">
+                <div class="drop-zone" id="dropZone">
+                    <div class="scanner-line" id="scannerLine"></div>
+                    <div class="drop-zone-content" id="dropZoneContent">
+                        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                        <h3>Drag & Drop Image</h3>
+                        <p>or <span>browse your files</span></p>
+                        <span class="file-hint">Supports JPEG, PNG (Max 5MB)</span>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                    <img id="imagePreview" src="" alt="Preview" hidden>
+                </div>
+
+                <div class="results-panel" id="resultsPanel">
+                    <div class="placeholder-text" id="resultPlaceholder">
+                        <i class="fa-solid fa-robot"></i>
+                        <p>Await Analysis. Upload an image to trigger the AI diagnostic model.</p>
+                    </div>
+                    <div class="analysis-loader" id="analysisLoader" hidden>
+                        <div class="spinner"></div>
+                        <p>Analyzing phenotypic features...</p>
+                    </div>
+                    <div class="actual-results" id="actualResults" hidden>
+                        <div class="result-header">
+                            <span class="status-badge"><i class="fa-solid fa-circle-check"></i> Match Found</span>
+                            <h3 id="breedResultName">Gir Cattle</h3>
+                        </div>
+                        <div class="confidence-container">
+                            <div class="confidence-text">
+                                <span>Confidence Score</span>
+                                <span id="confidenceValue">96.8%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                        </div>
+                        <div class="breed-details">
+                            <h4>Key Characteristics:</h4>
+                            <ul id="breedTraits">
+                                <li><strong>Origin:</strong> Gujarat, India</li>
+                                <li><strong>Trait:</strong> Highly resistant to tropical diseases and extreme heat.</li>
+                                <li><strong>Feature:</strong> Distinctly rounded dome-shaped forehead and long pendulous ears.</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-secondary btn-sm" id="resetBtn"><i class="fa-solid fa-rotate-left"></i> Scan Another</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 IndiBreed AI. All rights reserved.</p>
+            <p class="creator-tag">Designed & Developed with <i class="fa-solid fa-heart pulse"></i> by <span class="creator-name">Abishek BV</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
